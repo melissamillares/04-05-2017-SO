@@ -30,3 +30,9 @@ void restav(int * a, int * b, int n) {
 		a[i] = a[i] + b[i];
 	}
 }
+
+void multescalar(int *a, int *b, int *c, int n) {
+	for (int i = 0; i <= n; i++) {
+		*a += b[i] * c[i];
+	}
+}
