@@ -1,8 +1,8 @@
 clean:
-	rm -rf a.out fibo.o libfibo.a main
+	rm -rf a.out oper.o liboper.a main
 obj:
-	gcc -c fibo.c -o fibo.o
+	gcc -c oper.c -o oper.o
 lib:
-	ar rcs libfibo.a fibo.o
+	ar rcs liboper.a oper.o
 bin: obj lib
-	gcc -static main.c -L. -I. -lfibo -o main
+	gcc -static main.c -L. -I. -loper -o main
